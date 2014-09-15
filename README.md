@@ -41,3 +41,11 @@ Linked iPhoneSimulator6.1.sdk from Xcode 4.6.3 (iPhoneSimulator.platform)
 Linked MacOSX10.7.sdk from Xcode 4.6.3 (MacOSX.platform)
 rnelson@boxer /Developer $
 ```
+
+Caution
+-------
+This is simply the solution I found online for my problem. I assume this won't 
+cause any problems, but that could be a horribly wrong assumption. Most of my 
+development is done with RubyMotion, where this solution works. Your mileage 
+may vary, especially if you are doing Objective-C/Swift development directly in 
+Xcode.
