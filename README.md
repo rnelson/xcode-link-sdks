@@ -22,8 +22,10 @@ that the solution most people suggest is to simply download an old copy of Xcode
 and copy the SDKs into the appropriate path of the new version. With 6.1 already 
 in beta, I wanted to automate the process for future Xcode releases.
 
+
 Usage
 -----
+
 1. Create `/Developer` if it doesn't exist on your system; this is the directory 
    that Xcode used to live in, prior to being moved to a single large bundle in
    `/Applications`
@@ -42,8 +44,21 @@ Linked MacOSX10.7.sdk from Xcode 4.6.3 (MacOSX.platform)
 rnelson@boxer /Developer $
 ```
 
+
+Tips
+----
+
+If you have Gatekeeper installed, the first launching of a beta version of Xcode 
+may take forever as the system verifies the checksums on 5 GB worth of files. If 
+you use this script and future betas, you can mark an app bundle as safe with 
+the following:
+
+`xattr -d com.apple.quarantine /Applications/Xcode 6.1b1.app`
+
+
 Caution
 -------
+
 This is simply the solution I found online for my problem. I assume this won't 
 cause any problems, but that could be a horribly wrong assumption. Most of my 
 development is done with RubyMotion, where this solution works. Your mileage 
